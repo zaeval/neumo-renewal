@@ -12,12 +12,33 @@
         --cg40: #EDF1F5;
         --cg20: #F7F9FA;
 
-        --primary-light : 42%;
-        --primary-color: lch(var(--primary-light) 77 284);
-        --background-color: lch(var(--primary-light) 77 284);
-        --light-shadow: lch(calc(var(--primary-light) + 10%) 77 284);
-        --dark-shadow: lch(calc(var(--primary-light) - 10%) 77 284);
-        --font-color: white;
+        --white: lch(100% 0 0);
+        --black: lch(6.5% 3.5 254);
+
+        --primary-light : 46.5%;
+        --primary-croma : 92;
+        --primary-hue : 42;
+
+        --secondary-light: 34%;
+        --secondary-croma: 24;
+        --secondary-hue: 210;
+
+        --primary-color: lch(var(--primary-light) var(--primary-croma) var(--primary-hue));
+        --primary-background-color: lch(var(--primary-light) var(--primary-croma) var(--primary-hue));
+        --primary-light-solid: lch(calc(var(--primary-light) + 15%) var(--primary-croma) var(--primary-hue));
+        --primary-dark-solid: lch(calc(var(--primary-light) - 15%) var(--primary-croma) var(--primary-hue));
+        --primary-light-stroke: lch(calc(var(--primary-light) + 25%) var(--primary-croma) var(--primary-hue));
+        --primary-dark-stroke:lch(calc(var(--primary-light) - 25%) var(--primary-croma) var(--primary-hue));
+
+        --secondary-color: lch(var(--secondary-light) var(--secondary-croma) var(--secondary-hue));
+        --secondary-background-color: lch(var(--secondary-light) var(--secondary-croma) var(--secondary-hue));
+        --secondary-light-solid: lch(calc(var(--secondary-light) + 15%) var(--secondary-croma) var(--secondary-hue));
+        --secondary-dark-solid: lch(calc(var(--secondary-light) - 15%) var(--secondary-croma) var(--secondary-hue));
+        --secondary-light-stroke: lch(calc(var(--secondary-light) + 25%) var(--secondary-croma) var(--secondary-hue));
+        --secondary-dark-stroke:lch(calc(var(--secondary-light) - 25%) var(--secondary-croma) var(--secondary-hue));
+
+
+
 
         --direction-x: -4px;
         --direction-y: -4px;
@@ -29,7 +50,10 @@
         --text-direction-y-invert: 2px;
     }
 
-    .primary {
-
+    .text-white{
+        color: var(--white);
+    }
+    .text-black{
+        color: var(--black);
     }
 }

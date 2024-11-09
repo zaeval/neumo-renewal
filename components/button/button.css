@@ -1,4 +1,10 @@
-@layer neumorphism-style {
+@layer setup {
+    .justify-content-center{
+        justify-content: center;
+    }
+    .align-items-center{
+        align-content: center;
+    }
     .border {
         position: absolute;
         background: linear-gradient(180deg, #FFFFFF 0%, #E1E6EC 100%);
@@ -27,7 +33,6 @@
     }
 
     .dynamic-size {
-        padding: 24px;
         visibility: hidden;
         display: flex;
     }
@@ -58,36 +63,108 @@
 
     button * {
         font-family: Spoqa Han Sans Neo;
-        font-size: 40px;
         font-weight: 700;
-        line-height: 48px;
         letter-spacing: 0px;
         text-align: center;
         transition: .2s ease;
     }
 
-    button .solid {
+    button.medium *{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    button.small *{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    button.small *{
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    button.medium{
+        border-radius: 12px;
+    }
+    button.small{
+        border-radius: 10px;
+    }
+    button.xsmall{
+        border-radius: 6px;
+    }
+
+    button.medium .dynamic-size{
+        padding: 24px;
+    }
+    button.small .dynamic-size{
+        padding: 12px;
+    }
+    button.xsmall .dynamic-size{
+        padding: 6px;
+    }
+
+    button.medium .solid {
         left: 4px;
         right: 4px;
         top: 4px;
         bottom: 4px;
         border-radius: 12px;
-
+    }
+    button.small .solid {
+        left: 2px;
+        right: 2px;
+        top: 2px;
+        bottom: 2px;
+        border-radius: 10px;
+    }
+    button.xsmall .solid {
+        left: 2px;
+        right: 2px;
+        top: 2px;
+        bottom: 2px;
+        border-radius: 6px;
     }
 
     button .border {
+    }
+    button.medium .border{
         border-radius: 14px;
-        box-shadow: -10px -10px 20px #FFFFFF, 10px 10px 20px #DAE0E6;
+        box-shadow: -10px -10px 20px var(--white), 10px 10px 20px #DAE0E6;
+    }
+    button.small .border{
+        border-radius: 12px;
+        box-shadow: -6px -6px 12px var(--white), 6px 6px 12px #DAE0E6;
+    }
+    button.xsmall .border{
+        border-radius: 8px;
+        box-shadow: -3px -3px 6px var(--white), 3px 3px 6px #DAE0E6;
+    }
+
+    button.medium .hover .border{
+        box-shadow: 0px -10px 20px #FFFFFF, 0px 10px 40px #B8C2CC;
+    }
+    button.small .hover .border{
+        box-shadow: 0px -6px 12px #FFFFFF, 0px 6px 24px #B8C2CC;
+    }
+    button.xsmall .hover .border{
+        box-shadow: 0px -3px 6px #FFFFFF, 0px 3px 12px #B8C2CC;
+    }
+
+    button.medium .content {
+        border-radius: 14px;
+    }
+    button.small .content {
+        border-radius: 12px;
+    }
+    button.xsmall .content {
+        border-radius: 8px;
     }
 
     /* primary button */
     button.primary {
-        color: white;
         cursor: pointer;
     }
     button.primary .hover .border {
-        background: linear-gradient(105deg, var(--light-shadow) 0%, var(--dark-shadow) 100%);
-        box-shadow: 0px -10px 20px #FFFFFF, 0px 10px 40px #B8C2CC;
+        background: linear-gradient(105deg, var(--primary-light-stroke) 0%, var(--primary-dark-stroke) 100%);
     }
     button.primary .hover .solid {
         background: linear-gradient(105deg, var(--primary-color) 0%, var(--primary-color) 100%);
@@ -96,11 +173,11 @@
         opacity: 1;
     }
     button.primary .active .border {
-        background: linear-gradient(115deg, #7CE5FF 17%, #0066CC 65%);
+        background: linear-gradient(105deg, var(--primary-light-stroke) 0%, var(--primary-dark-stroke) 100%);
     }
     button.primary .active .solid {
-        background: linear-gradient(105deg, var(--light-shadow) 0%, var(--dark-shadow) 100%);
-        box-shadow: inset -4px -4px 8px #66B3FF, inset 4px 4px 8px var(--dark-shadow);
+        background: linear-gradient(105deg, var(--primary-light-solid) 0%, var(--primary-dark-solid) 100%);
+        box-shadow: inset -4px -4px 8px var(--primary-light-solid), inset 4px 4px 8px var(--primary-dark-solid);
     }
     button.primary:active .active {
         opacity: 1;
@@ -109,12 +186,44 @@
         opacity: 0;
     }
     button.primary .solid {
-        background: linear-gradient(105deg, var(--light-shadow) 0%, var(--dark-shadow) 100%);
+        background: linear-gradient(105deg, var(--primary-light-solid) 0%, var(--primary-dark-solid) 100%);
     }
     button.primary .border {
-        background: linear-gradient(115deg, #7CE5FF 17%, #0066CC 65%);
+        background: linear-gradient(105deg, var(--primary-light-stroke) 0%, var(--primary-dark-stroke) 100%);
     }
-    button.primary .content {
-        border-radius: 14px;
+
+    /* secondary button */
+    button.secondary {
+        cursor: pointer;
     }
+    button.secondary .hover .border {
+        background: linear-gradient(105deg, var(--secondary-light-stroke) 0%, var(--secondary-dark-stroke) 100%);
+        box-shadow: 0px -10px 20px #FFFFFF, 0px 10px 40px #B8C2CC;
+    }
+    button.secondary .hover .solid {
+        background: linear-gradient(105deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
+    }
+    button.secondary:hover .hover {
+        opacity: 1;
+    }
+    button.secondary .active .border {
+        background: linear-gradient(105deg, var(--secondary-light-stroke) 0%, var(--secondary-dark-stroke) 100%);
+    }
+    button.secondary .active .solid {
+        background: linear-gradient(105deg, var(--secondary-light-solid) 0%, var(--secondary-dark-solid) 100%);
+        box-shadow: inset -4px -4px 8px var(--secondary-light-solid), inset 4px 4px 8px var(--secondary-dark-solid);
+    }
+    button.secondary:active .active {
+        opacity: 1;
+    }
+    button.secondary:active .hover {
+        opacity: 0;
+    }
+    button.secondary .solid {
+        background: linear-gradient(105deg, var(--secondary-light-solid) 0%, var(--secondary-dark-solid) 100%);
+    }
+    button.secondary .border {
+        background: linear-gradient(105deg, var(--secondary-light-stroke) 0%, var(--secondary-dark-stroke) 100%);
+    }
+
 }

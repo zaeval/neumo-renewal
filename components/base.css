@@ -1,0 +1,8 @@
+@layer base{
+    .safe-area{
+        display: inline-block;
+    }
+    .safe-area.xsmall{
+
+    }
+}
