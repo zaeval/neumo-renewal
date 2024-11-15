@@ -34,24 +34,59 @@
         transition: background-color 5000s ease-in-out 0s;
     }
 
+    @-webkit-keyframes autofill-white {
+        0%,100% {
+            background-color: white;
+        }
+    }
+    @-webkit-keyframes autofill-transparent {
+        0%,100% {
+            background-color: transparent;
+        }
+    }
+    @-webkit-keyframes autofill-primary {
+        0%,100% {
+            background-color: var(--primary-background-color);
+        }
+    }
+    @-webkit-keyframes autofill-secondary {
+        0%,100% {
+            background-color: var(--secondary-background-color);
+        }
+    }
+    @-webkit-keyframes autofill-third {
+        0%,100% {
+            background-color: var(--third-background-color);
+        }
+    }
+
     .text-input:placeholder-shown {
-        background-color: transparent !important;
+        /*background-color: transparent !important;*/
+        animation-name: autofill-transparent;
+        animation-fill-mode: both;
     }
 
     .background-primary .text-input, .background-primary .text-input:autofill, .background-primary .text-input:-webkit-autofill {
-        background-color: var(--primary-background-color) !important;
+        /*background-color: var(--primary-background-color) !important;*/
+        animation-name: autofill-primary;
+        animation-fill-mode: both;
     }
     .background-secondary .text-input, .background-secondary .text-input:autofill, .background-secondary .text-input:-webkit-autofill {
-        background-color: var(--secondary-background-color) !important;
+        /*background-color: var(--secondary-background-color) !important;*/
+        animation-name: autofill-secondary;
+        animation-fill-mode: both;
     }
     .background-third .text-input, .background-third .text-input:autofill, .background-third .text-input:-webkit-autofill{
-        background-color: var(--third-background-color) !important;
+        /*background-color: var(--third-background-color) !important;*/
+        animation-name: autofill-third;
+        animation-fill-mode: both;
     }
 
     .text-input:focus, .text-input:autofill:focus, .text-input:-webkit-autofill:focus {
         border: 0;
         outline: none;
-        background-color: var(--white) !important;
+        animation-name: autofill-white;
+        animation-fill-mode: both;
     }
 
     .background-primary .text-box{
