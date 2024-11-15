@@ -26,24 +26,26 @@
         color: var(--cg900);
     }
 
-    .text-input:focus {
-        border: 0;
-        outline: none;
-        background-color: var(--white) !important;
-    }
+
 
     .text-input:placeholder-shown {
         background-color: transparent !important;
     }
 
     .background-primary .text-input, .background-primary .text-input:autofill, .background-primary .text-input:-webkit-autofill {
-        background-color: var(--primary-background-color);
+        background-color: var(--primary-background-color) !important;
     }
     .background-secondary .text-input, .background-secondary .text-input:autofill, .background-secondary .text-input:-webkit-autofill {
-        background-color: var(--secondary-background-color);
+        background-color: var(--secondary-background-color) !important;
     }
     .background-third .text-input, .background-third .text-input:autofill, .background-third .text-input:-webkit-autofill{
-        background-color: var(--third-background-color);
+        background-color: var(--third-background-color) !important;
+    }
+
+    .text-input:focus, .text-input:autofill:focus, .text-input:-webkit-autofill:focus {
+        border: 0;
+        outline: none;
+        background-color: var(--white) !important;
     }
 
     .background-primary .text-box{
