@@ -123,6 +123,67 @@
     button .border {
     }
     /* IDLE */
+    .background-primary button.medium .shadow{
+        box-shadow: -10px -10px 20px var(--primary-light-solid), 10px 10px 20px var(--primary-dark-solid);
+    }
+    .background-secondary button.medium .shadow{
+        box-shadow: -10px -10px 20px var(--secondary-light-solid), 10px 10px 20px var(--secondary-dark-solid);
+    }
+    .background-third button.medium .shadow{
+        box-shadow: -10px -10px 20px var(--third-light-solid), 10px 10px 20px var(--third-dark-solid);
+    }
+
+    .background-primary button.small .shadow{
+        box-shadow: -6px -6px 12px var(--primary-light-solid),  6px 6px 12px var(--primary-dark-solid);
+    }
+    .background-secondary button.small .shadow{
+        box-shadow: -6px -6px 12px var(--secondary-light-solid),  6px 6px 12px var(--secondary-dark-solid);
+    }
+    .background-third button.small .shadow{
+        box-shadow: -6px -6px 12px var(--third-light-solid),  6px 6px 12px var(--third-dark-solid);
+    }
+
+    .background-primary button.xsmall .shadow{
+        box-shadow: -3px -3px 6px var(--primary-light-solid),  3px 3px 6px var(--primary-dark-solid);
+    }
+    .background-secondary button.xsmall .shadow{
+        box-shadow: -3px -3px 6px var(--secondary-light-solid),  3px 3px 6px var(--secondary-dark-solid);
+    }
+    .background-third button.xsmall .shadow{
+        box-shadow: -3px -3px 6px var(--third-light-solid),  3px 3px 6px var(--third-dark-solid);
+    }
+
+    /* hover */
+    .background-primary button.medium .hover .shadow{
+        box-shadow: 0px -10px 20px var(--primary-light-solid), 0px 10px 40px var(--primary-dark-solid);
+    }
+    .background-secondary button.medium .hover .shadow{
+        box-shadow: 0px -10px 20px var(--secondary-light-solid), 0px 10px 40px var(--secondary-dark-solid);
+    }
+    .background-third button.medium .hover .shadow{
+        box-shadow: 0px -10px 20px var(--third-light-solid),  0px 10px 40px var(--third-dark-solid);
+    }
+
+    .background-primary button.small .hover .shadow{
+        box-shadow: 0px -6px 12px var(--primary-light-solid),  0px 6px 24px var(--primary-dark-solid);
+    }
+    .background-secondary button.small .hover .shadow{
+        box-shadow: 0px -6px 12px var(--secondary-light-solid),  0px 6px 24px var(--secondary-dark-solid);
+    }
+    .background-third button.small .hover .shadow{
+        box-shadow: 0px -6px 12px var(--third-light-solid),  0px 6px 24px var(--third-dark-solid);
+    }
+
+    .background-primary button.xsmall .hover .shadow{
+        box-shadow: 0px -3px 6px var(--primary-light-solid),  0px 3px 12px var(--primary-dark-solid);
+    }
+    .background-secondary button.xsmall .hover .shadow{
+        box-shadow: 0px -3px 6px var(--secondary-light-solid),  0px 3px 12px var(--secondary-dark-solid);
+    }
+    .background-third button.xsmall .hover .shadow{
+        box-shadow: 0px -3px 6px var(--third-light-solid),  0px 3px 12px var(--third-dark-solid);
+    }
+
     .background-primary:not(:has(.background-secondary)):not(:has(.background-third)) button.medium .shadow{
         box-shadow: -10px -10px 20px var(--primary-light-solid), 10px 10px 20px var(--primary-dark-solid);
     }
