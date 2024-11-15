@@ -36,33 +36,33 @@
         background-color: transparent !important;
     }
 
-    .background-primary .text-input{
+    .background-primary:not(:has(.background-secondary)):not(:has(.background-third)) .text-input{
         background-color: var(--primary-background-color);
     }
-    .background-secondary .text-input{
+    .background-secondary:not(:has(.background-primary)):not(:has(.background-third)) .text-input{
         background-color: var(--secondary-background-color);
     }
-    .background-third .text-input{
+    .background-third:not(:has(.background-secondary)):not(:has(.background-primary)) .text-input{
         background-color: var(--third-background-color);
     }
 
-    .background-primary .text-box{
+    .background-primary:not(:has(.background-secondary)):not(:has(.background-third)) .text-box{
         box-shadow: inset -4px -4px 8px var(--primary-light-solid), inset 4px 4px 8px var(--primary-dark-solid), 0px 0px 0px var(--primary-light-solid), 0px 0px 0px var(--primary-dark-solid);
     }
-    .background-secondary .text-box{
+    .background-secondary:not(:has(.background-primary)):not(:has(.background-third)) .text-box{
         box-shadow: inset -4px -4px 8px var(--secondary-light-solid), inset 4px 4px 8px var(--secondary-dark-solid), 0px 0px 0px var(--secondary-light-solid), 0px 0px 0px var(--secondary-dark-solid);
     }
-    .background-third .text-box{
+    .background-third:not(:has(.background-secondary)):not(:has(.background-primary)) .text-box{
         box-shadow: inset -4px -4px 8px var(--third-light-solid), inset 4px 4px 8px var(--third-dark-solid), 0px 0px 0px var(--third-light-solid), 0px 0px 0px var(--third-dark-solid);
     }
 
-    .background-primary .text-box.active{
+    .background-primary:not(:has(.background-secondary)):not(:has(.background-third)) .text-box.active{
         box-shadow: inset 0px 0px 0px var(--white), inset 0px 0px 0px var(--white), -10px -10px 20px var(--primary-light-solid), 10px 10px 32px var(--primary-dark-solid);
     }
-    .background-secondary .text-box.active{
+    .background-secondary:not(:has(.background-primary)):not(:has(.background-third)) .text-box.active{
         box-shadow: inset 0px 0px 0px var(--white), inset 0px 0px 0px var(--white), -10px -10px 20px var(--secondary-light-solid), 10px 10px 32px var(--secondary-dark-solid);
     }
-    .background-third .text-box.active{
+    .background-third:not(:has(.background-secondary)):not(:has(.background-primary)) .text-box.active{
         box-shadow: inset 0px 0px 0px var(--white), inset 0px 0px 0px var(--white), -10px -10px 20px var(--third-light-solid), 10px 10px 32px var(--third-dark-solid);
     }
 
