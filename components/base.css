@@ -1,5 +1,5 @@
 @layer base {
-    *{
+    * {
         font-family: Spoqa Han Sans Neo;
         font-weight: 700;
     }
@@ -8,35 +8,40 @@
         display: inline-block;
     }
 
-    .safe-area:has(.xsmall):not(:has(+*)):after{
-        content:"";
-        height:12px;
-        display:block;
+    .safe-area:has(.xsmall):not(:has(+*)):after {
+        content: "";
+        height: 12px;
+        display: block;
     }
-    .safe-area:has(.xsmall):before{
-        content:"";
-        height:12px;
-        display:block;
+
+    .safe-area:has(.xsmall):before {
+        content: "";
+        height: 12px;
+        display: block;
     }
-    .safe-area:has(.small):not(:has(+*)):after{
-        content:"";
-        height:24px;
-        display:block;
+
+    .safe-area:has(.small):not(:has(+*)):after {
+        content: "";
+        height: 24px;
+        display: block;
     }
-    .safe-area:has(.small):before{
-        content:"";
-        height:24px;
-        display:block;
+
+    .safe-area:has(.small):before {
+        content: "";
+        height: 24px;
+        display: block;
     }
-    .safe-area:has(.medium):not(:has(+*)):after{
-        content:"";
-        height:40px;
-        display:block;
+
+    .safe-area:has(.medium):not(:has(+*)):after {
+        content: "";
+        height: 40px;
+        display: block;
     }
-    .safe-area:has(.medium):before{
-        content:"";
-        height:40px;
-        display:block;
+
+    .safe-area:has(.medium):before {
+        content: "";
+        height: 40px;
+        display: block;
     }
 
     .safe-area:has(.large) {
@@ -58,25 +63,44 @@
     .padding-large {
         padding: 32px;
     }
-    .flex{
+
+    .flex {
         display: flex;
     }
-    .flex-column{
+
+    .flex-column {
         flex-direction: column;
     }
-    .flex-row{
+
+    .flex-row {
         flex-direction: row;
     }
-    .justify-content-center{
+
+    .justify-content-center {
         justify-content: center;
     }
-    .align-items-center{
+
+    .align-items-center {
         align-items: center;
     }
-    .inline-block{
+
+    .inline-block {
         display: inline-block;
     }
-    .text-align-center{
+
+    .text-align-center {
         text-align: center;
+    }
+
+    .white-space-pre-line {
+        white-space: pre-line;
+    }
+
+    .margin-0 {
+        margin: 0;
+    }
+
+    .word-break {
+        word-break: break-word;
     }
 }
