@@ -48,6 +48,10 @@
         --third-light-stroke: lch(calc(var(--third-light) + 25%) var(--third-croma) var(--third-hue));
         --third-dark-stroke:lch(calc(var(--third-light) - 25%) var(--third-croma) var(--third-hue));
 
+        --white-background-color: lch(100% 0 0);
+        --white-light-solid: lch(90% 0 0);
+        --white-dark-solid: lch(85% 0 0);
+
         --direction-x: -4px;
         --direction-y: -4px;
         --direction-x-invert: 4px;
@@ -73,5 +77,8 @@
     }
     .text-black{
         color: var(--black);
+    }
+    .text-primary{
+        color: var(--primary-color);
     }
 }

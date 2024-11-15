@@ -54,11 +54,9 @@
         border: 0;
         justify-content: center;
         align-items: center;
-        /*background: var(--depth-1-color);*/
-        /*box-shadow: -4px -4px 6px #FFFFFF, 4px 4px 6px #D2D4D5;*/
         position: relative;
         opacity: 1;
-
+        background: transparent;
     }
 
     button * {
@@ -248,7 +246,6 @@
     }
     button.secondary .hover .border {
         background: linear-gradient(105deg, var(--secondary-light-stroke) 0%, var(--secondary-dark-stroke) 100%);
-        box-shadow: 0px -10px 20px #FFFFFF, 0px 10px 40px #B8C2CC;
     }
     button.secondary .hover .solid {
         background: linear-gradient(105deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
@@ -274,6 +271,81 @@
     }
     button.secondary .border {
         background: linear-gradient(105deg, var(--secondary-light-stroke) 0%, var(--secondary-dark-stroke) 100%);
+    }
+
+    /*white*/
+    button.white {
+        cursor: pointer;
+    }
+    button.white .hover .border {
+        background: linear-gradient(105deg, var(--white) 0%, var(--white) 100%);
+    }
+    button.white .hover .solid {
+        background: linear-gradient(105deg, var(--white) 0%, var(--white) 100%);
+    }
+    button.white:hover .hover {
+        opacity: 1;
+    }
+    button.white .active .border {
+        background: linear-gradient(105deg, var(--white) 0%, var(--white) 100%);
+    }
+    button.white .active .solid {
+        background: linear-gradient(105deg, var(--white) 0%, var(--white) 100%);
+        box-shadow: inset -4px -4px 8px var(--white-light-solid), inset 4px 4px 8px var(--white-dark-solid);
+    }
+    button.white:active .active {
+        opacity: 1;
+    }
+    button.white:active .hover {
+        opacity: 0;
+    }
+    button.white .solid {
+        background: linear-gradient(105deg, var(--white) 0%, var(--white) 100%);
+    }
+    button.white .border {
+        background: linear-gradient(105deg, var(--white) 0%, var(--white) 100%);
+    }
+
+    button.white .solid {
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+    }
+
+    /* disabled */
+    button[disabled] {
+        color: var(--cg300);
+        cursor: not-allowed;
+    }
+
+    button[disabled] .solid {
+        background: var(--cg40);
+    }
+
+    button[disabled] .border {
+        background: linear-gradient(105deg, var(--white) 0%, var(--cg100) 100%);
+        transition: .2s ease;
+    }
+
+    button[disabled] .hover .solid, button[disabled] .active .solid {
+        background: var(--cg100);
+        box-shadow: inset 0px 0px 0px var(--white), inset 0px px 0px var(--white);
+    }
+
+    button[disabled] .hover .border, button[disabled] .active .border {
+        background: var(--cg300);
+    }
+
+    button[disabled]:hover .hover, button[disabled]:active .active {
+        opacity: 1;
+    }
+
+    button[disabled]:hover > .border {
+        opacity: 0;
+    }
+    button[disabled] .hover .shadow, button[disabled] .active .shadow {
+        box-shadow: 0px 0px 0px var(--white), 0px px 0px var(--white) !important;
     }
 
 }
