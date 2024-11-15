@@ -1,21 +1,82 @@
 @layer base {
+    *{
+        font-family: Spoqa Han Sans Neo;
+        font-weight: 700;
+    }
+
     .safe-area {
         display: inline-block;
     }
 
-    .safe-area:has(.xsmall) {
-        margin: 12px;
+    .safe-area:has(.xsmall):not(:has(+*)):after{
+        content:"";
+        height:12px;
+        display:block;
     }
-
-    .safe-area:has(.small) {
-        margin: 24px;
+    .safe-area:has(.xsmall):before{
+        content:"";
+        height:12px;
+        display:block;
     }
-
-    .safe-area:has(.medium) {
-        margin: 40px;
+    .safe-area:has(.small):not(:has(+*)):after{
+        content:"";
+        height:24px;
+        display:block;
+    }
+    .safe-area:has(.small):before{
+        content:"";
+        height:24px;
+        display:block;
+    }
+    .safe-area:has(.medium):not(:has(+*)):after{
+        content:"";
+        height:40px;
+        display:block;
+    }
+    .safe-area:has(.medium):before{
+        content:"";
+        height:40px;
+        display:block;
     }
 
     .safe-area:has(.large) {
 
+    }
+
+    .padding-xsmall {
+        padding: 6px;
+    }
+
+    .padding-small {
+        padding: 12px;
+    }
+
+    .padding-medium {
+        padding: 24px;
+    }
+
+    .padding-large {
+        padding: 32px;
+    }
+    .flex{
+        display: flex;
+    }
+    .flex-column{
+        flex-direction: column;
+    }
+    .flex-row{
+        flex-direction: row;
+    }
+    .justify-content-center{
+        justify-content: center;
+    }
+    .align-items-center{
+        align-items: center;
+    }
+    .inline-block{
+        display: inline-block;
+    }
+    .text-align-center{
+        text-align: center;
     }
 }

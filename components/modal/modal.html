@@ -5,23 +5,71 @@
     <title>Title</title>
     <link href="../base.css" rel="stylesheet"/>
     <link href="../color/color.css" rel="stylesheet"/>
-    <link href="card.css" rel="stylesheet"/>
+    <link href="../card/card.css" rel="stylesheet"/>
     <link href="../input/input.css" rel="stylesheet"/>
     <script src="../input/input.js"></script>
     <link href="../button/button.css" rel="stylesheet"/>
     <style>
-        .card{
-            max-width:308px;
+        .card {
+            max-width: 308px;
             width: calc(100% - 48px);
             padding-bottom: 0;
         }
-        .safe-area:has(> .text-box){
-            width:100%;
-        }
 
+        .safe-area:has(> .text-box) {
+            width: 100%;
+        }
+        /*.modal > .content{*/
+        /*    height: calc(20% - 24px);*/
+        /*}*/
     </style>
+    <link href="modal.css" rel="stylesheet"/>
+    <script src="modal.js"></script>
 </head>
 <body class="background-third">
+<div class="modal force" id="success">
+    <div class="content flex flex-column align-items-center justify-content-center">
+        <p class="text-align-center text-black">회원가입이 정상적으로 완료 되었습니다</p>
+        <div class="flex justify-content-center">
+            <div class="safe-area">
+                <button class="secondary small text-white" type="button" onclick="closeModal('#success')">
+                    <div class="status hover">
+                        <div class="border shadow"></div>
+                        <div class="solid">
+                        </div>
+                        <div class="dynamic-size">
+                            확인
+                        </div>
+                        <div class="content align-items-center justify-content-center">
+                            확인
+                        </div>
+                    </div>
+                    <div class="status active">
+                        <div class="border shadow"></div>
+                        <div class="solid">
+                        </div>
+                        <div class="dynamic-size">
+                            확인
+                        </div>
+                        <div class="content align-items-center justify-content-center">
+                            확인
+                        </div>
+                    </div>
+                    <div class="border shadow"></div>
+                    <div class="solid">
+                    </div>
+                    <div class="dynamic-size">
+                        확인
+                    </div>
+                    <div class="content align-items-center justify-content-center">
+                        확인
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section class="flex flex-column justify-content-center align-items-center">
     <div class="logo">
         <img src=""/>
@@ -52,7 +100,7 @@
                 </div>
                 <div class="flex justify-content-center">
                     <div class="safe-area">
-                        <button class="primary small text-white" type="button">
+                        <button class="primary small text-white" type="button" onclick="openModal('#success')">
                             <div class="status hover">
                                 <div class="border shadow"></div>
                                 <div class="solid">

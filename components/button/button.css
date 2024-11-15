@@ -60,8 +60,6 @@
     }
 
     button * {
-        font-family: Spoqa Han Sans Neo;
-        font-weight: 700;
         letter-spacing: 0px;
         text-align: center;
         transition: .2s ease;

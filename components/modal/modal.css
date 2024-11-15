@@ -1,0 +1,42 @@
+@layer modal {
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right:0;
+        bottom:0;
+        transition: 0.5s ease-in-out;
+        transform: translateY(-100%);
+        z-index: 1000;
+    }
+    .modal > .content:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .modal > .content{
+        background: rgba(255, 255, 255, 0.75);
+        border-radius: 0px 0px 6px 6px;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        width: calc(80% - 48px);
+        height: calc(80% - 24px);
+        left: 10%;
+        padding: 24px;
+        transition: 0.5s ease-in-out;
+    }
+    .modal.open{
+        top:0;
+        transform: translateY(0%);
+    }
+    .modal.open > .content{
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    }
+    .modal.open + *{
+        pointer-events: none;
+    }
+}

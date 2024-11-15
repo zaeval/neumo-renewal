@@ -1,0 +1,28 @@
+@layer card {
+    .card {
+        border-radius: 16px;
+    }
+
+    .background-primary .card {
+        box-shadow: inset 0px 0px 0px var(--white), inset 0px 0px 0px var(--white), -10px -10px 20px var(--primary-light-solid), 10px 10px 32px var(--primary-dark-solid);
+    }
+
+    .background-secondary .card {
+        box-shadow: inset 0px 0px 0px var(--white), inset 0px 0px 0px var(--white), -10px -10px 20px var(--secondary-light-solid), 10px 10px 32px var(--secondary-dark-solid);
+    }
+
+    .background-third .card {
+        box-shadow: inset 0px 0px 0px var(--white), inset 0px 0px 0px var(--white), -10px -10px 20px var(--third-light-solid), 10px 10px 32px var(--third-dark-solid);
+    }
+
+    .safe-area:has(> .card):not(:has(+*)):after{
+        content:"";
+        height:32px;
+        display:block;
+    }
+    .safe-area:has(> .card):before{
+        content:"";
+        height:32px;
+        display:block;
+    }
+}

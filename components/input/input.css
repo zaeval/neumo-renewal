@@ -1,0 +1,79 @@
+@layer text-input {
+    .text-box {
+        position: relative;
+        height: 24px;
+        padding: 12px;
+        border-radius: 8px;
+        align-items: center;
+        display: flex;
+        color: var(--cg300);
+        transition: .2s ease-in-out;
+    }
+
+    .text-box.active {
+        background: var(--white);
+    }
+
+    .text-input {
+        border: 0;
+        font-size: 18px;
+        position: absolute;
+        top: 12px;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        transition: .2s;
+        color: var(--cg900);
+    }
+
+    .text-input:focus {
+        border: 0;
+        outline: none;
+        background-color: var(--white) !important;
+    }
+
+    .text-input:placeholder-shown {
+        background-color: transparent !important;
+    }
+
+    .background-primary .text-input{
+        background-color: var(--primary-background-color);
+    }
+    .background-secondary .text-input{
+        background-color: var(--secondary-background-color);
+    }
+    .background-third .text-input{
+        background-color: var(--third-background-color);
+    }
+
+    .background-primary .text-box{
+        box-shadow: inset -4px -4px 8px var(--primary-light-solid), inset 4px 4px 8px var(--primary-dark-solid), 0px 0px 0px var(--primary-light-solid), 0px 0px 0px var(--primary-dark-solid);
+    }
+    .background-secondary .text-box{
+        box-shadow: inset -4px -4px 8px var(--secondary-light-solid), inset 4px 4px 8px var(--secondary-dark-solid), 0px 0px 0px var(--secondary-light-solid), 0px 0px 0px var(--secondary-dark-solid);
+    }
+    .background-third .text-box{
+        box-shadow: inset -4px -4px 8px var(--third-light-solid), inset 4px 4px 8px var(--third-dark-solid), 0px 0px 0px var(--third-light-solid), 0px 0px 0px var(--third-dark-solid);
+    }
+
+    .background-primary .text-box.active{
+        box-shadow: inset 0px 0px 0px var(--white), inset 0px 0px 0px var(--white), -10px -10px 20px var(--primary-light-solid), 10px 10px 32px var(--primary-dark-solid);
+    }
+    .background-secondary .text-box.active{
+        box-shadow: inset 0px 0px 0px var(--white), inset 0px 0px 0px var(--white), -10px -10px 20px var(--secondary-light-solid), 10px 10px 32px var(--secondary-dark-solid);
+    }
+    .background-third .text-box.active{
+        box-shadow: inset 0px 0px 0px var(--white), inset 0px 0px 0px var(--white), -10px -10px 20px var(--third-light-solid), 10px 10px 32px var(--third-dark-solid);
+    }
+
+    .safe-area:has(> .text-box):not(:has(+*)):after{
+        content:"";
+        height:32px;
+        display:block;
+    }
+    .safe-area:has(> .text-box):before{
+        content:"";
+        height:32px;
+        display:block;
+    }
+}
