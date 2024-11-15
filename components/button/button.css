@@ -7,7 +7,7 @@
     }
     .border {
         position: absolute;
-        background: linear-gradient(180deg, #FFFFFF 0%, #E1E6EC 100%);
+        /*background: linear-gradient(180deg, #FFFFFF 0%, #E1E6EC 100%);*/
         left: 0;
         right: 0;
         top: 0;
@@ -126,27 +126,77 @@
 
     button .border {
     }
+    /* IDLE */
+    .background-primary button.medium .shadow{
+        box-shadow: -10px -10px 20px var(--primary-light-solid), 10px 10px 20px var(--primary-dark-solid);
+    }
+    .background-secondary button.medium .shadow{
+        box-shadow: -10px -10px 20px var(--secondary-light-solid), 10px 10px 20px var(--secondary-dark-solid);
+    }
+    .background-third button.medium .shadow{
+        box-shadow: -10px -10px 20px var(--third-light-solid), 10px 10px 20px var(--third-dark-solid);
+    }
+
+    .background-primary button.small .shadow{
+        box-shadow: -6px -6px 12px var(--primary-light-solid),  6px 6px 12px var(--primary-dark-solid);
+    }
+    .background-secondary button.small .shadow{
+        box-shadow: -6px -6px 12px var(--secondary-light-solid),  6px 6px 12px var(--secondary-dark-solid);
+    }
+    .background-third button.small .shadow{
+        box-shadow: -6px -6px 12px var(--third-light-solid),  6px 6px 12px var(--third-dark-solid);
+    }
+
+    .background-primary button.xsmall .shadow{
+        box-shadow: -3px -3px 6px var(--primary-light-solid),  3px 3px 6px var(--primary-dark-solid);
+    }
+    .background-secondary button.xsmall .shadow{
+        box-shadow: -3px -3px 6px var(--secondary-light-solid),  3px 3px 6px var(--secondary-dark-solid);
+    }
+    .background-third button.xsmall .shadow{
+        box-shadow: -3px -3px 6px var(--third-light-solid),  3px 3px 6px var(--third-dark-solid);
+    }
+
+    /* hover */
+    .background-primary button.medium .hover .shadow{
+        box-shadow: 0px -10px 20px var(--primary-light-solid), 0px 10px 40px var(--primary-dark-solid);
+    }
+    .background-secondary button.medium .hover .shadow{
+        box-shadow: 0px -10px 20px var(--secondary-light-solid), 0px 10px 40px var(--secondary-dark-solid);
+    }
+    .background-third button.medium .hover .shadow{
+        box-shadow: 0px -10px 20px var(--third-light-solid),  0px 10px 40px var(--third-dark-solid);
+    }
+
+    .background-primary button.small .hover .shadow{
+        box-shadow: 0px -6px 12px var(--primary-light-solid),  0px 6px 24px var(--primary-dark-solid);
+    }
+    .background-secondary button.small .hover .shadow{
+        box-shadow: 0px -6px 12px var(--secondary-light-solid),  0px 6px 24px var(--secondary-dark-solid);
+    }
+    .background-third button.small .hover .shadow{
+        box-shadow: 0px -6px 12px var(--third-light-solid),  0px 6px 24px var(--third-dark-solid);
+    }
+
+    .background-primary button.xsmall .hover .shadow{
+        box-shadow: 0px -3px 6px var(--primary-light-solid),  0px 3px 12px var(--primary-dark-solid);
+    }
+    .background-secondary button.xsmall .hover .shadow{
+        box-shadow: 0px -3px 6px var(--secondary-light-solid),  0px 3px 12px var(--secondary-dark-solid);
+    }
+    .background-third button.xsmall .hover .shadow{
+        box-shadow: 0px -3px 6px var(--third-light-solid),  0px 3px 12px var(--third-dark-solid);
+    }
+
+
     button.medium .border{
         border-radius: 14px;
-        box-shadow: -10px -10px 20px var(--white), 10px 10px 20px #DAE0E6;
     }
     button.small .border{
         border-radius: 12px;
-        box-shadow: -6px -6px 12px var(--white), 6px 6px 12px #DAE0E6;
     }
     button.xsmall .border{
         border-radius: 8px;
-        box-shadow: -3px -3px 6px var(--white), 3px 3px 6px #DAE0E6;
-    }
-
-    button.medium .hover .border{
-        box-shadow: 0px -10px 20px #FFFFFF, 0px 10px 40px #B8C2CC;
-    }
-    button.small .hover .border{
-        box-shadow: 0px -6px 12px #FFFFFF, 0px 6px 24px #B8C2CC;
-    }
-    button.xsmall .hover .border{
-        box-shadow: 0px -3px 6px #FFFFFF, 0px 3px 12px #B8C2CC;
     }
 
     button.medium .content {

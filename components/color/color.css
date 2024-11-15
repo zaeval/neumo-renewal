@@ -23,6 +23,10 @@
         --secondary-croma: 24;
         --secondary-hue: 210;
 
+        --third-light: 90%;
+        --third-croma: 6.85;
+        --third-hue: 253.9;
+
         --primary-color: lch(var(--primary-light) var(--primary-croma) var(--primary-hue));
         --primary-background-color: lch(var(--primary-light) var(--primary-croma) var(--primary-hue));
         --primary-light-solid: lch(calc(var(--primary-light) + 15%) var(--primary-croma) var(--primary-hue));
@@ -37,8 +41,12 @@
         --secondary-light-stroke: lch(calc(var(--secondary-light) + 25%) var(--secondary-croma) var(--secondary-hue));
         --secondary-dark-stroke:lch(calc(var(--secondary-light) - 25%) var(--secondary-croma) var(--secondary-hue));
 
-
-
+        --third-color: lch(var(--third-light) var(--third-croma) var(--third-hue));
+        --third-background-color: lch(var(--third-light) var(--third-croma) var(--third-hue));
+        --third-light-solid: lch(calc(var(--third-light) + 15%) var(--third-croma) var(--third-hue));
+        --third-dark-solid: lch(calc(var(--third-light) - 15%) var(--third-croma) var(--third-hue));
+        --third-light-stroke: lch(calc(var(--third-light) + 25%) var(--third-croma) var(--third-hue));
+        --third-dark-stroke:lch(calc(var(--third-light) - 25%) var(--third-croma) var(--third-hue));
 
         --direction-x: -4px;
         --direction-y: -4px;
@@ -48,6 +56,16 @@
         --text-direction-y: -2px;
         --text-direction-x-invert: 2px;
         --text-direction-y-invert: 2px;
+    }
+
+    .background-primary{
+        background-color: var(--primary-background-color);
+    }
+    .background-secondary{
+        background-color: var(--secondary-background-color);
+    }
+    .background-third{
+        background-color: var(--third-background-color);
     }
 
     .text-white{

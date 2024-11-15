@@ -1,8 +1,21 @@
-@layer base{
-    .safe-area{
+@layer base {
+    .safe-area {
         display: inline-block;
     }
-    .safe-area.xsmall{
+
+    .safe-area:has(.xsmall) {
+        margin: 12px;
+    }
+
+    .safe-area:has(.small) {
+        margin: 24px;
+    }
+
+    .safe-area:has(.medium) {
+        margin: 40px;
+    }
+
+    .safe-area:has(.large) {
 
     }
 }
