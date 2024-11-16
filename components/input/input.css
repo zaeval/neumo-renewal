@@ -26,9 +26,7 @@
         color: var(--cg900);
     }
 
-    .text-input:placeholder-shown {
-        background-color: transparent !important;
-    }
+
 
     .background-primary .text-input, .background-primary .text-input:autofill, .background-primary .text-input:-webkit-autofill {
         background-color: var(--primary-background-color) !important;
@@ -50,6 +48,10 @@
         outline: none;
         background-color: var(--white) !important;
         -webkit-box-shadow: 0 0 0px 1000px var(--white) inset !important;
+    }
+    .text-input:placeholder-shown {
+        background-color: transparent !important;
+        -webkit-box-shadow: 0 0 0px 0px var(--white) inset !important;
     }
 
     .background-primary .text-box{
